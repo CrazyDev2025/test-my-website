@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+
+    <style>
+      /* * {
+        background-color: darkblue;
+        color: aliceblue;
+      } */
+      * {
+        margin: 0;
+        padding: 5px;
+      }
+
+      .init-btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 400px;
+        gap: 10px;
+      }
+
+      .click-btn {
+        background-color: green;
+        color: antiquewhite;
+        border-radius: 50px;
+        padding: 10px;
+      }
+      .seen {
+        display: none;
+      }
+
+      .button {
+        display: flex;
+        border-radius: 20px;
+        border: 1px solid green;
+        width: 100px;
+        height: 25px;
+        text-align: center;
+        justify-content: center;
+        padding: 1px;
+        align-items: center;
+        box-shadow: 1px 1px;
+      }
+
+      .buttons-containers {
+        display: flex;
+        gap: 10px;
+      }
+      .screen {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid green;
+        border-radius: 15px;
+
+        width: auto;
+        height: 100px;
+        gap: 0px;
+      }
+
+      .result,
+      .inputs2 {
+        flex: 1;
+        margin: 0;
+      }
+
+      .result {
+        border: 1px brown dotted;
+      }
+
+      .inputs2 {
+        border: 2px dotted black;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- click Message -->
+    <div class="init-area">
+      <div class="init-btn-container">
+        <p>Click the button to download the virus!</p>
+        <button class="click-btn">Click Here</button>
+      </div>
+    </div>
+
+    <div class="buttons-containers hide">
+      <p class="button1 button">Calculadora</p>
+      <p class="button2 button">Click Me</p>
+      <p class="button3 button">Test</p>
+    </div>
+
+    <div class="contenedor-calculadora contenedor hide">
+      <div class="inputs1 screen">
+        <p class="result">0</p>
+        <p class="inputs2">0</p>
+      </div>
+
+      <!-- <div class="operations"></div> -->
+    </div>
+
+    <script>
+      // let button = document.querySelector(".button");
+      // let hello = document.querySelector(".hello");
+      // let seenMessage = document.querySelector(".seen");
+      let btn3 = document.querySelector(".button3");
+      let clickBtn = document.querySelector(".click-btn");
+      let btnContainer = document.querySelector(".buttons-containers");
+      let initArea = document.querySelector(".init-area");
+
+      btn3.addEventListener("click", (e) => {
+        console.log(e);
+        e.preventDefault();
+
+        window.open("./test.html");
+      });
+
+      clickBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        initArea.classList.toggle("hide");
+        btnContainer.classList.toggle("hide");
+      });
+
+      // button.addEventListener("click", (el) => {
+      //   seenMessage.classList.toggle("seen");
+      //   button.classList.add("seen");
+      // });
+    </script>
+  </body>
+</html>
